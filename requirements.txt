@@ -5,3 +5,4 @@ requests >= 2.22.0
 mypy
 types-requests
 types-beautifulsoup4
+python-telegram-bot
