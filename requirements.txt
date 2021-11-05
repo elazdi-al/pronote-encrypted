@@ -6,3 +6,4 @@ mypy
 types-requests
 types-beautifulsoup4
 python-telegram-bot
+pronotepy
