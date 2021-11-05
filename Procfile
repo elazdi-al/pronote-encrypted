@@ -1,1 +1,1 @@
-worker: python encrypted-python.py
+worker: python encrypted-pronote.py
