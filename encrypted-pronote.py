@@ -34,12 +34,7 @@ while i == 0:
             message = f"Vous avez une nouvelle note de {periods[-1].grades[-1].grade}/{periods[-1].grades[-1].out_of} en {periods[-1].grades[-1].subject.name} et votre moyenne est maintenant de {periods[-1].overall_average}"
             note_last = periods[-1].grades[-1].grade
             bot.sendMessage(chat_id=chat_id, text=message)
-        else:
-            token = '2139097942:AAGV2nDtmGmKGF0MXuH3o-qU7vf-PL0Htg8'
-            chat_id = '971617548'
-            bot = telegram.Bot(token=token)
-            message="rien de nouveau..."
-            bot.sendMessage(chat_id=chat_id, text=message)
+
     time.sleep(600)
         # with open(filename, "r") as read_file:
 
