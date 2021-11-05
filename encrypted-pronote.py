@@ -1,12 +1,13 @@
 import json
+import os
 import pronotepy
 import telegram
 import time
 from pronotepy.dataClasses import *
 
 client = pronotepy.Client('https://3500002a.index-education.net/pronote/eleve.html',
-                          username='',
-                          password='')
+                          username=str(os.environ.get('username')),
+                          password=str(os.environ.get('password')))
 
 i = 0
 while i == 0:
