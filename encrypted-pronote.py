@@ -9,33 +9,32 @@ client = pronotepy.Client('https://3500002a.index-education.net/pronote/eleve.ht
                           username=str(os.environ.get('username')),
                           password=str(os.environ.get('password')))
 
-i = 0
-while i == 0:
-    if client.logged_in:
-        notes = []
-        periods = client.periods
-        filename = "grades.json"
-        for grade in periods[-1].grades:
-            notes.append(grade.grade)
 
-        with open(filename, "r") as read_file:
-            notes_old = json.load(read_file)
+if client.logged_in:
+    notes = []
+    periods = client.periods
+    filename = "grades.json"
+    for grade in periods[-1].grades:
+        notes.append(grade.grade)
 
-        with open(filename, 'w') as file_object:
-            json.dump(notes, file_object, indent=3)
+    with open(filename, "r") as read_file:
+        notes_old = json.load(read_file)
 
-        s = set(notes_old)
-        diff = [x for x in notes if x not in s]
+    with open(filename, 'w') as file_object:
+        json.dump(notes, file_object, indent=3)
 
-        if diff != []:
-            token = '2139097942:AAGV2nDtmGmKGF0MXuH3o-qU7vf-PL0Htg8'
-            chat_id = '971617548'
-            bot = telegram.Bot(token=token)
-            message = f"Vous avez une nouvelle note de {periods[-1].grades[-1].grade}/{periods[-1].grades[-1].out_of} en {periods[-1].grades[-1].subject.name} et votre moyenne est maintenant de {periods[-1].overall_average}"
-            note_last = periods[-1].grades[-1].grade
-            bot.sendMessage(chat_id=chat_id, text=message)
+    s = set(notes_old)
+    diff = [x for x in notes if x not in s]
 
-    time.sleep(600)
+    if diff != []:
+        token = 'your-token-id'
+        chat_id = 'yourchatid'
+        bot = telegram.Bot(token=token)
+        message = f"Vous avez une nouvelle note de {periods[-1].grades[-1].grade}/{periods[-1].grades[-1].out_of} en {periods[-1].grades[-1].subject.name} et votre moyenne est maintenant de {periods[-1].overall_average}"
+        note_last = periods[-1].grades[-1].grade
+        bot.sendMessage(chat_id=chat_id, text=message)
+
+time.sleep(600)
         # with open(filename, "r") as read_file:
 
             #notes_old = json.load(read_file)
