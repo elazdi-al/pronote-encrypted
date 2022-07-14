@@ -10,4 +10,6 @@ That's when Pronotify appeared, which, thanks to the [Pronotepy](https://github.
 
 ![Pronotepy](https://camo.githubusercontent.com/3ae516af10d2a609989fece36dda63f4d10ee30cca1dd46564454c5bb07697c9/68747470733a2f2f70726f6e6f746570792e72656164746865646f63732e696f2f656e2f6c61746573742f5f696d616765732f69636f6e2e706e67)
 
+# Installation
+To test the app, you may deploy it on heroku's platform, a free version of the subscription is enough to cover around 25 to 31 days of each month.
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
