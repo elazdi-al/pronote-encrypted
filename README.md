@@ -13,4 +13,4 @@ That's when Pronotify appeared, which, thanks to the [Pronotepy](https://github.
 # Installation
 To test the app, you may deploy it on heroku's platform, a free version of the subscription is enough to cover around 25 to 31 days of each month.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/elazdi-al/pronote-encrypted)
