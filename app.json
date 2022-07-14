@@ -1,0 +1,14 @@
+{
+    "name": "Pronotify",
+    "description": "A notification system for Pronote's grading platform",
+    "repository": "https://github.com/elazdi-al/pronote-encrypted",
+    "keywords": ["Bot", "notification", "telegram", "grades"],
+    "env": {
+        "username": {
+          "description": "Your pronote username"
+        },
+        "password": {
+          "description": "Your pronote password"
+        }
+      }
+}
